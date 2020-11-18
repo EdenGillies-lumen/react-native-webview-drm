@@ -871,8 +871,9 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
         } else if (requestedResources[i].equals(PermissionRequest.RESOURCE_VIDEO_CAPTURE)) {
           permissions.add(Manifest.permission.CAMERA);
         } else if (requestedResources[i].equals(PermissionRequest.RESOURCE_PROTECTED_MEDIA_ID)) {
-            request.grant(requestedResources);
-          
+          request.grant(requestedResources);
+          return;
+        }
         // TODO: RESOURCE_MIDI_SYSEX, RESOURCE_PROTECTED_MEDIA_ID.
       }
 
